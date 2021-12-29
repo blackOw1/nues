@@ -1,0 +1,33 @@
+@use '../utilities' as utils;
+
+.load-more {
+    margin-bottom: 72px;
+}
+
+
+.load-more__btn {
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    background-color: rgb(var(--color-primary));
+    color: var(--color-btn-text);
+    font-size: 14px;
+    // font-weight: 700;
+    letter-spacing: 2px;
+
+    transition: box-shadow 250ms ease;
+
+    &.disabled {
+        background-color: var(--color-btn-disabled);
+        color: var(--color-btn-disabled-text);
+        
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 8px 24px var(--color-btn-hover);
+    }
+}

@@ -1,0 +1,30 @@
+html[data-theme="dark"] {
+    --color-primary: 240, 98, 146;
+    --color-bg: #292b33;
+    --color-logo: rgb(255, 255, 255);
+    --color-body-text: rgba(255, 255, 255, 0.40);
+    --color-headings: rgba(255, 255, 255, 0.88);
+    --color-links: rgba(255, 255, 255, 0.88);
+    --color-links-hover: var(--color-snow-white);
+    --color-backdrop: rgba(0, 0, 0, 0.56);
+    --color-footer: var(--color-gray-4);
+    --color-hr: var(--color-gray-3);
+    --color-icon: rgba(255, 255, 255, 0.88);
+    --color-btn-text: rgba(255, 255, 255, 0.88);
+    --color-btn-hover: rgba(var(--color-primary), 0.48);
+    --color-btn-disabled: #2e343d;
+    --color-btn-disabled-text: rgba(255, 255, 255, 0.24);
+    --color-card: #2e343d;
+    --color-card-hover: rgba(33, 33, 33, 0.08);
+    --color-card-desc: rgba(var(--color-primary), 0.08);
+    --color-search-subheading: var(--color-snow-white);
+    --color-search-input: #393f48;
+    --color-search-input-text: rgba(255, 255, 255, 0.88);
+    --color-search-input-shadow: rgba(33, 33, 33, 0.04);
+    --color-header: rgba(41, 43, 51, 0.80);
+
+    .card:hover {
+        transition: background-color 250ms ease;
+        background-color: #393f48;
+    }
+}

@@ -1,0 +1,63 @@
+@use '../utilities/variables' as utils;
+
+svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.icon {
+    padding: 4px;
+    line-height: 1;
+    cursor: pointer;
+
+    &.search,
+    &.theme,
+    &.menu,
+    &.close {
+        color: var(--color-icon);
+    }
+
+    &.theme,
+    &.close {
+        border: 0;
+        background-color: transparent;
+    }
+
+    &.spinner {
+        cursor: default;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        transition: opacity 250ms ease;
+
+        // &.hidden {
+        //     opacity: 0;
+        // }
+
+        svg {
+            width: 32px;
+            height: 32px;
+            animation: rotate 2s infinite linear;
+        }
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    &:hover {
+        color: var(--color-links-hover);
+    }
+}

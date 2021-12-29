@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../src/sass/main.scss">
+    <script type="module" defer src="../src/js/controller.js"></script>
+    <title>Search - nues</title>
+</head>
+<body id="search" class="search-results">
+    <!-- HEADER -->
+    <header class="header">
+        <a class="logo" href="/">nues</a>
+        <nav class="nav">
+            <ul class="links">
+                <li class="links__item">
+                    <a href="technology.html" class="links__item-link">Technology</a>
+                </li>
+                <li class="links__item">
+                    <a href="search.html" class="links__item-link">Gaming</a>
+                </li>
+                <li class="links__item">
+                    <a href="/" class="links__item-link">Entertainment</a>
+                </li>
+                <li class="links__item">
+                    <a href="/" class="links__item-link">Business</a>
+                </li>
+                <li class="links__item">
+                    <a href="/" class="links__item-link">Politics</a>
+                </li>
+                <li class="links__item">
+                    <a href="/" class="links__item-link">Finance</a>
+                </li>
+                <li class="links__item">
+                    <a href="/" class="links__item-link">Economics</a>
+                </li>
+                <li class="links__item">
+                    <a href="/" class="links__item-link">Sports</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="search.html" class="icon search">
+            <svg class="search-icon">
+                <use href="../src/img/icons.svg#search"></use>
+            </svg>
+        </a>
+
+
+        <button class="icon icon-btn theme" aria-label="Toggle dark theme">
+            <svg class="icon-moon">
+                <use href="../src/img/icons.svg#moon"></use>
+            </svg>
+        </button>
+        <div class="icon menu">
+            <svg class="icon-menu">
+                <use href="../src/img/icons.svg#menu"></use>
+            </svg>
+        </div>
+    </header>
+
+
+    <aside class="sidenav">
+        <header class="sidenav-header">
+            <a class="logo" href="/">nues</a>
+            <button class="icon icon-btn close" aria-label="Close sidenav">
+                <svg class="icon-close">
+                    <use href="../src/img/icons.svg#x"></use>
+                </svg>
+            </button>
+        </header>
+        <ul class="links">
+            <li class="links__item">
+                <a href="/" class="links__item-link links__item-link--active">Weather</a>
+            </li>
+            <li class="links__item">
+                <a href="/" class="links__item-link">World</a>
+            </li>
+            <li class="links__item">
+                <a href="/" class="links__item-link">Politics</a>
+            </li>
+            <li class="links__item">
+                <a href="/" class="links__item-link">Technology</a>
+            </li>
+            <li class="links__item">
+                <a href="/" class="links__item-link">Health</a>
+            </li>
+            <li class="links__item">
+                <a href="/" class="links__item-link">Business</a>
+            </li>
+            <li class="links__item">
+                <a href="/" class="links__item-link">Lifestyle</a>
+            </li>
+            <li class="links__item">
+                <a href="/" class="links__item-link">Entertainment</a>
+            </li>
+            <li class="links__item">
+                <a href="/" class="links__item-link">Sports</a>
+            </li>
+        </ul>
+    </aside>
+
+
+    <div class="content-container">
+
+        <div class="search-header">
+            <div class="search-header__headings">
+                <!-- <h1 class="heading">Results for "technology"</h1> -->
+                <h2 class="subheading"></h2>
+            </div>
+
+            <div class="search-header__input">
+                <!--  -->
+                <div class="icon search">
+                    <!-- <span class="search__icon"></span> -->
+                    <svg class="search-icon">
+                        <use href="../src/img/icons.svg#search"></use>
+                    </svg>
+                </div>
+                <form class="form" action="" method="get">
+                    <label for="input"></label>
+                    <input class="form__input" id="input" name="q" type="text" placeholder="Search..." autocomplete="off">
+                </form>
+            </div>
+        </div>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <ul class="list"></ul>
+        </main>
+        
+
+        <div class="load-more">
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <nav class="footer-nav">
+
+            <div class="footer-nav-categories">
+                <!-- <a class="footer-nav-title" href="/">Categories</a> -->
+                <a class="logo footer-nav-logo" href="/">nues</a>
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-list-item">
+                        <a class="footer-nav-list-item-link" href="/">Technology</a>
+                    </li>
+                    <li class="footer-nav-list-item">
+                        <a class="footer-nav-list-item-link" href="/">Gaming</a>
+                    </li>
+                    <li class="footer-nav-list-item">
+                        <a class="footer-nav-list-item-link" href="/">Entertainment</a>
+                    </li>
+                    <li class="footer-nav-list-item">
+                        <a class="footer-nav-list-item-link" href="/">Business</a>
+                    </li>
+                    <li class="footer-nav-list-item">
+                        <a class="footer-nav-list-item-link" href="/">Politics</a>
+                    </li>
+                    <li class="footer-nav-list-item">
+                        <a class="footer-nav-list-item-link" href="/">Finance</a>
+                    </li>
+                    <li class="footer-nav-list-item">
+                        <a class="footer-nav-list-item-link" href="/">Economics</a>
+                    </li>
+                    <li class="footer-nav-list-item">
+                        <a class="footer-nav-list-item-link" href="/">Sports</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="footer-bottom">
+            <span class="footer-copyright">&copy; 2021 nues. All rights reserved.</span>
+
+            <ul class="footer-legal">
+                <li class="footer-legal-item">
+                    <a class="footer-legal-item-link" href="/">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li class="footer-legal-item">
+                    <a class="footer-legal-item-link" href="/">
+                        Terms of Use
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="backdrop"></div>
+</body>
+</html>
