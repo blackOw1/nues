@@ -8,8 +8,9 @@ const timeout = function(s) {
     });
 };
 
-export const AJAX = async function(url, host, key) {
-    const fetchPromise = fetch(url, { method: 'GET', headers: { 'x-rapidapi-host': `${host}`, 'x-rapidapi-key': `${key}` } });
+export const fetchNews = async function(url, query, page) {
+    const fetchPromise = fetch(`${url}/${query}/${page}`);
+    // const fetchPromise = fetch(url, { method: 'GET', headers: { 'x-rapidapi-host': `${host}`, 'x-rapidapi-key': `${key}` } });
 
     try {
         const res = await Promise.race([fetchPromise, timeout(TIMOUT_SEC)]);

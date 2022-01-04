@@ -1,5 +1,5 @@
-import { API_HOST, API_URL, API_KEY } from "./config";
-import { AJAX } from "./helpers";
+import { API_URL } from "./config";
+import { fetchNews } from "./helpers";
 
 export const state = {
     pages: {},
@@ -40,7 +40,8 @@ export const loadNews = async function(query, pageId) {
     else page = state.pages[query]?.page ?? 1;
 
     try {
-        const data = await AJAX(`${API_URL}?q=${query}&lang=en&page=${page}`, API_HOST, API_KEY);
+        const data = await fetchNews(`${API_URL}`, query, page);
+        // const data = await AJAX(`${API_URL}?q=${query}&lang=en&page=${page}`, API_HOST, API_KEY);
 
         if (data.status !== 'ok') throw data;
         
@@ -69,7 +70,7 @@ export const loadNews = async function(query, pageId) {
         // Store news on storage device
         setLocalStorage();
     } catch(err) {
-        console.error(`💥 No matches were found for "${err.user_input.q}" 💥`);
+        if (pageId === 'search') console.error(`💥 No matches were found for "${err.user_input.q}" 💥`);
         throw err;
     }
 };
@@ -90,7 +91,7 @@ export const loadMoreResults = async function() {
     }
 
     try {
-        const data = await AJAX(`${API_URL}?q=${query}&lang=en&page=${page}`, API_HOST, API_KEY);
+        const data = await fetchNews(`${API_URL}`, query, page);
         const obj = createNewsObject(data);
 
         if (pageId === 'search') {
@@ -163,7 +164,7 @@ const getLocalStorage = function(query) {
 };
 
 const loadCache = function(cache, pageId) {
-    const time = getMinutes(cache.lastAccess);
+    const time = getMinutes(cache?.lastAccess);
     // console.log('LAST ACCESSED (MINUTES):', time);
 
     if (time < 30) {

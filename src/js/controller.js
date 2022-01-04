@@ -42,7 +42,7 @@ const controlNews = async function() {
         // Load load more button
         loadMoreView._initBtn(id, id === 'search' ? model.state.search.queries : model.state.pages);
     } catch(err) {
-        console.log(err);
+        // console.log(err);
         contentView._renderError(err);
     }
 };

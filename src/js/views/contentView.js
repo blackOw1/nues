@@ -72,6 +72,15 @@ class ContentView extends View {
         const id = this._parentElement.id;
 
         this._removeSpinner();
+
+        const main = this._parentElement.querySelector('.main');
+        const markup = `
+            <div class="card__heading">
+                Failed to fetch content... please try again later. ${status ? `${status}.` : ''}
+            </div>
+        `;
+
+        this._mainElement.innerHTML = markup;
     }
 }
 
