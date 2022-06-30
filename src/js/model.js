@@ -27,7 +27,7 @@ const createNewsObject = function(data) {
             summary: article.summary,
             topic: article.topic,
             author: article.author ?? 'No author',
-            authors: article.authors.length ? article.authors : 'No authors'
+            authors: article.authors?.length ? article.authors : 'No authors'
         }
     });
 };
@@ -235,5 +235,3 @@ export const init = async function() {
         throw err;
     }
 };
-
-console.log('CURRENT STATE:', state);
