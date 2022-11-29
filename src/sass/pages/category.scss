@@ -1,0 +1,21 @@
+@use '../utilities' as utils;
+
+.content-container {
+    min-height: 100vh;
+    padding-top: calc(48px + 56px);
+    max-width: 1120px;
+    margin: 0 auto;
+
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+.category {
+
+    .main {
+        &__heading {
+            margin-bottom: 24px;
+            color: var(--color-headings);
+        }
+    }
+}

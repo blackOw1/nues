@@ -1,0 +1,26 @@
+@use '../utilities' as utils;
+
+.backdrop {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-backdrop);
+    // background-color: rgba(var(--color-black), 0.56);
+    // background-color: rgba(utils.$color-black, 0.56);
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity 250ms ease, visibility 250ms ease;
+
+    @media only screen and (min-width: 992px) {
+        // opacity: 1;
+    }
+
+    &-visible {
+        visibility: visible;
+        opacity: 1;
+    }
+}

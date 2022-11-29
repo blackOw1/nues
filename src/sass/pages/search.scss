@@ -1,0 +1,113 @@
+@use '../utilities' as utils;
+
+.search-results {
+    .content-container {
+        min-height: 100vh;
+        padding-top: calc(48px + 56px);
+
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+
+    .subheading {
+        font-size: 1rem;
+        font-weight: 400;
+        // margin-top: 4px;
+        line-height: 1.5;
+        height: 24px;
+        color: var(--color-search-subheading);
+    }
+
+    // Search header
+    .search-header {
+        width: calc(100% - 40px);
+        height: 100px;
+        background-color: rgb(var(--color-primary));
+        border-radius: 16px;
+        margin: 0 auto;
+
+        &__headings {
+            width: calc(100% - 40px);
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            top: 40%;
+
+            @media only screen and (min-width: 720px) {
+                width: 100%;
+            }
+        }
+
+        &__input {
+            width: calc(100% - 40px);
+            max-width: 600px;
+            background-color: var(--color-search-input);
+            border-radius: 16px;
+
+            position: relative;
+            // bottom: -50%;
+            bottom: calc(-100% + 24px + 28px);
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+
+            box-shadow: 0 8px 24px var(--color-search-input-shadow);
+
+            @media only screen and (min-width: 720px) {
+                width: 100%;
+            }
+
+            .icon {
+                // margin-right: 8px;
+                padding: 16px;
+            }
+        }
+
+
+
+        .form {
+            width: 100%;
+            height: 56px;
+            // height: 100%;
+            
+            &__input {
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+                font-size: 1rem;
+                background-color: transparent;
+                padding: 16px 16px 16px 0;
+                color: var(--color-search-input-text);
+                
+                &::placeholder {
+                    color: var(--color-input-placeholder);
+                }
+            }
+        }
+    }
+
+
+    .main {
+        // grid-template-areas: unset;
+        // grid-template-columns: 1fr;
+        padding: 80px 20px 72px;
+        max-width: 1120px;
+    
+        @media only screen and (min-width: 992px) {
+            // padding: 48px 20px 48px;
+        }
+    }
+
+    .no-results {
+        height: 40vh;
+        margin: 0 auto;
+        
+        &__heading {
+            font-size: 32px;
+            font-weight: 400;
+            // text-align: center;
+        }
+    }
+}
