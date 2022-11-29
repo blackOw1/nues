@@ -1,0 +1,23 @@
+.throbber {
+  width: 42px;
+  height: 42px;
+  border: 4px solid;
+  border-radius: 50%;
+  border-color: var(--clr-accent) var(--clr-almost-white) var(--clr-almost-white)
+    var(--clr-almost-white);
+  animation: spinner 750ms ease-in-out infinite;
+  animation-play-state: inherit;
+  position: absolute;
+  animation-play-state: inherit;
+  will-change: transform;
+  margin: 12em auto;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

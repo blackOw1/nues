@@ -1,0 +1,22 @@
+.button {
+  border: 1px solid var(--border-clr);
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: var(--btn-bgclr);
+  cursor: pointer;
+  outline: none;
+  color: var(--btn-clr);
+}
+
+.button-contents {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-sm);
+}
+
+.button:disabled {
+  background-color: var(--btn-bgclr-disabled);
+  color: var(--btn-clr-disabled);
+  cursor: not-allowed;
+}

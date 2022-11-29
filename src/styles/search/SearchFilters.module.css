@@ -1,0 +1,36 @@
+.filters-list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.filters-list-buttons {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  width: 100%;
+}
+
+.filters-list-button-apply {
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+  border: 1px solid transparent;
+}
+
+.filters-list-button-reset {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: var(--clr-accent);
+}
+
+.filters-list-button-reset:hover {
+  background-color: var(--btn-bgclr-filter);
+}
+
+@media only screen and (min-width: 768px) {
+  .filters-list {
+    flex-direction: row;
+  }
+}
