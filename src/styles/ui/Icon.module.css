@@ -1,0 +1,16 @@
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--clr-primary);
+  opacity: 0.48;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+}
+
+[data-theme='light'] .icon {
+  stroke: var(--clr-secondary);
+  opacity: 1;
+}

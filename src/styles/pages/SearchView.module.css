@@ -1,0 +1,28 @@
+.search-tab {
+  width: 100%;
+  max-width: 500px;
+}
+
+.results-lane {
+  margin-top: 16px;
+  width: 100%;
+}
+
+.filters-lane {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-results-text {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--fclr-primary);
+}
+
+.icon-filters {
+  transform: rotate(90deg) scaleX(-1);
+  width: 18px;
+  height: 18px;
+}

@@ -1,0 +1,10 @@
+.filters-list-section-list-item {
+  list-style-type: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  color: var(--clr-secondary);
+}
+
+.filters-list-section-list-item:hover {
+  background-color: var(--hover-bgclr);
+}
