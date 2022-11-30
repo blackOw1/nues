@@ -22,7 +22,7 @@ const SearchView = () => {
   const userQuery = modifyQueryString(searchParams.get('query'));
   const { isFirstRun } = useSelector((state) => state.page);
   const { urlQueryString, isNewSearch, query } = useSelector((state) => state.query);
-  const BASE_URL = 'http://45.77.119.185:4004/api/nues/v1';
+  const BASE_URL = 'https://gotechapi.com/api/nues/v1';
   const url = (isNewSearch && `${BASE_URL}/search?${urlQueryString}`) || null;
   const { data, isLoading, error: errorMessage } = useFetch(url);
   const { newsFound: totalNewsFound, cachedNews } = useSelector((state) => state.news);
