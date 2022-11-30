@@ -17,13 +17,9 @@ const useFetch = (url) => {
     setError(null);
 
     fetch(url)
-      .then((res) => {
-        if (!res.ok) throw new Error('Failed to fetch content. Please try again later.');
-        return res.json();
-      })
+      .then((res) => res.json())
       .then((data) => {
-        if (data.status === 429) throw new Error(data.data.message);
-        if (data.status !== 'ok') throw new Error('No results were found for your search');
+        if (data.status !== 'success') throw new Error(data.message);
 
         setTimeout(() => {
           setData(data);
